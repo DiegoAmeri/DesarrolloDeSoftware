@@ -7,14 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="desarrolloSoftware" />
+        <module name="backend-web" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="desarrolloSoftware" target="17" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="backend-web" options="-parameters" />
       <module name="desarrolloSoftware" options="-parameters" />
     </option>
   </component>

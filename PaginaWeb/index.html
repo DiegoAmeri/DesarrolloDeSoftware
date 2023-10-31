@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+    <title>Mi Página Web</title>
+</head>
+<body>
+    <header>
+        <!-- OPCIONAL: Coloca aquí tu logo -->
+        <h1>Mi Página Web</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#acerca">Acerca de</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <nav id="sidebar">
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#acerca">Acerca de</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    <div class="content-container">
+    <section id="inicio" class="contenido">
+        <h2>Inicio</h2>
+        <p>Bienvenido a mi página web. Aquí puedes encontrar información sobre...</p>
+        <img src="img/imagen.jpg" alt="Mi imagen">
+    </section>
+
+    <section id="acerca" class="contenido">
+        <h2>Acerca de</h2>
+        <p>Soy un profesional en...</p>
+    </section>
+
+    <section id="servicios" class="contenido">
+        <h2>Servicios</h2>
+        <p>Bienvenidos a nuestra empresa. En <strong>Nuestra Empresa</strong>, ofrecemos servicios de alta calidad que incluyen:</p>
+        <ul>
+            <li>Servicio 1</li>
+            <li>Servicio 2</li>
+            <li>Servicio 3</li>
+        </ul>
+    </section>
+
+    <section id="contacto" class="contenido">
+        <h2>Contacto</h2>
+        <p>Puedes contactarme en:</p>
+        <ul>
+            <li><a href="https://www.instagram.com/DiegoAmeri10" target="_blank">Instagram</a></li>
+            <li><a href="https://www.facebook.com/diego.ameri.9" target="_blank">Facebook</a></li>
+            <li><a href="https://github.com/DiegoAmeri" target="_blank">GitHub</a></li>
+        </ul>
+    </section>
+</div>
+    <footer>
+        <p>&copy; 2023 Mi Página Web</p>
+    </footer>
+</body>
+</html>
+<script>
+    // Función para activar la animación cuando se desplaza a la sección de servicios
+    function activateServicesAnimation() {
+        var servicios = document.getElementById('servicios');
+        var serviciosOffset = servicios.getBoundingClientRect().top;
+        var screenHeight = window.innerHeight;
+
+        if (serviciosOffset < screenHeight) {
+            servicios.classList.add('animated');
+        }
+    }
+
+    // Evento de desplazamiento para activar la animación
+    window.addEventListener('scroll', activateServicesAnimation);
+
+    // Llamada inicial para activar la animación si la sección de servicios está en pantalla al cargar la página
+    window.addEventListener('load', activateServicesAnimation);
+        
+</script>
+<style>
+    /* Estilos generales */
+    body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Cambia el color de fondo principal */
+    overflow-x: hidden;
+}
+
+/* Estilos del header */
+header {
+    background-color: #3455db; /* Cambia el color de fondo del encabezado */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilos del contenido */
+.contenido {
+    background-color: #fff; /* Cambia el color de fondo del contenido */
+    padding: 40px;
+    border-radius: 10px; /* Agrega esquinas redondeadas al contenido */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Agrega una sombra suave al contenido */
+}
+
+/* Estilos del footer */
+footer {
+    background-color: #3455db; /* Cambia el color de fondo del pie de página */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Estilos para la imagen */
+.contenido img {
+    max-width: 100%; /* Ajusta el ancho máximo de la imagen al contenedor */
+    height: auto; /* Mantiene la proporción original de la imagen */
+}
+
+/* Estilos para la plantilla de colores de fondo */
+#inicio {
+    background-color: #ffcc00; /* Color de fondo para la sección "Inicio" */
+}
+
+#acerca {
+    background-color: #ff6699; /* Color de fondo para la sección "Acerca de" */
+}
+
+#servicios {
+    background-color: #063a53; /* Color de fondo para la sección "Servicios" */
+}
+
+#contacto {
+    background-color: #99ff99; /* Color de fondo para la sección "Contacto" */
+}
+
+/* Estilos del header */
+header {
+    background-color: #3455db; /* Cambia el color de fondo del encabezado */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilos del contenido */
+.contenido {
+    background-color: #fff; /* Cambia el color de fondo del contenido */
+    padding: 40px;
+    border-radius: 10px; /* Agrega esquinas redondeadas al contenido */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Agrega una sombra suave al contenido */
+}
+
+/* Estilos del footer */
+footer {
+    background-color: #3455db; /* Cambia el color de fondo del pie de página */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+#servicios {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Inicialmente oculto */
+    transform: translateY(20px); /* Desplazado hacia abajo */
+    transition: opacity 1s, transform 1s;
+}
+
+/* Estilos de la animación cuando se hace visible */
+#servicios.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Inicialmente oculta la barra lateral */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    overflow-y: auto;
+    transition: left 0.3s;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sidebar li {
+    margin: 10px 0;
+}
+
+#sidebar a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    display: block;
+}
+
+/* Estilos para abrir la barra lateral */
+#sidebar.open {
+    left: 0;
+}
+
+/* Estilos para el contenido principal */
+.content-container {
+    margin-left: 0;
+    transition: margin-left 0.3s;
+}
+
+/* Estilos para ajustar el contenido cuando se abre la barra lateral */
+.content-container.open {
+    margin-left: 250px;
+}
+</style>
